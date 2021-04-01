@@ -7,7 +7,7 @@
 
 ## Overview
 
-Code that supports the tutorial [Testing web applications using Playwright](https://docs.getxray.app/display/XRAYCLOUD/Testing+web+applications+using+Playwright) showcasing the integration between [Xray Test Management](https://www.getxray.app/) on Jira and Playwright.
+Code that supports the tutorial [Testing web applications using Nunit](https://docs.getxray.app/pages/viewpage.action?pageId=32806649) showcasing the integration between [Xray Test Management](https://www.getxray.app/) on Jira and NUnit.
 
 The test automation code implements a basic [Selenium Webdriver test](./WebdriverTest.cs).
 
@@ -38,7 +38,7 @@ docker run --rm -v $(pwd)/TestResults:/source/bin/Debug/net5.0/TestResults -t nu
 ## Submitting results to Jira
 
 Results can be submitted to Jira so that they can be shared with the team and their impacts be easily analysed.
-This can be achieved using [Xray Test Management](https://www.getxray.app/) as shown in further detail in this [tutorial](https://docs.getxray.app/display/XRAYCLOUD/Testing+web+applications+using+Playwright) .
+This can be achieved using [Xray Test Management](https://www.getxray.app/) as shown in further detail in this [tutorial](https://docs.getxray.app/pages/viewpage.action?pageId=32806649).
 
 ## Contact
 
