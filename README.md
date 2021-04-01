@@ -5,7 +5,38 @@
 [![license](https://img.shields.io/badge/License-BSD%203--Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/xray/community)
 
+## Overview
 
+Code that supports the tutorial [Testing web applications using Playwright](https://docs.getxray.app/display/XRAYCLOUD/Testing+web+applications+using+Playwright) showcasing the integration between [Xray Test Management](https://www.getxray.app/) on Jira and Playwright.
+
+## Prerequisites
+
+In order to run this tutorial, you need to have .NET 5.
+Dependencies can be installed using:
+
+```bash
+dotnet restore
+```
+
+## Running
+
+Tests can be run using locally `dotnet` tool.
+
+```bash
+dotnet test -s nunit.runsettings
+```
+
+Tests can also run inside a Docker container; local directory should be mounted so that NUnit XML results are stored locally.
+
+```bash
+docker run --rm -v $(pwd)/TestResults:/source/bin/Debug/net5.0/TestResults -t nunit_webdriver_tests
+```
+
+
+## Submitting results to Jira
+
+Results can be submitted to Jira so that they can be shared with the team and their impacts be easily analysed.
+This can be achieved using [Xray Test Management](https://www.getxray.app/) as shown in further detail in this [tutorial](https://docs.getxray.app/display/XRAYCLOUD/Testing+web+applications+using+Playwright) .
 
 ## Contact
 
