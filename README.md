@@ -9,6 +9,8 @@
 
 Code that supports the tutorial [Testing web applications using Playwright](https://docs.getxray.app/display/XRAYCLOUD/Testing+web+applications+using+Playwright) showcasing the integration between [Xray Test Management](https://www.getxray.app/) on Jira and Playwright.
 
+The test automation code implements a basic [Selenium Webdriver test](./WebdriverTest.cs).
+
 ## Prerequisites
 
 In order to run this tutorial, you need to have .NET 5.
