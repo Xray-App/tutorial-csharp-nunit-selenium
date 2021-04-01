@@ -1,0 +1,8 @@
+#!/bin/bash
+FILE="TestResults/nunit_webdriver_tests.xml"
+PROJECT=BOOK
+JIRA_BASEURL=https://yourjiraurl
+JIRA_USERNAME=user
+JIRA_PASSWORD=pass
+
+curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD -F "file=@$FILE" "$JIRA_BASEURL/rest/raven/1.0/import/execution/nunit?projectKey=$PROJECT"

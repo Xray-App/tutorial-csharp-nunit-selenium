@@ -1,0 +1,9 @@
+run_using_nunit3_console.sh
+*.safe
+*.txt
+TestResults/
+*.xml
+bin/
+obj/
+import_results.sh
+NUnit.ConsoleRunner.3.12.0/
