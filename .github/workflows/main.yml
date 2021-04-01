@@ -17,7 +17,7 @@ on:
 jobs:
 
   # This workflow contains a single job called "test"
-  build:
+  test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -37,7 +37,7 @@ jobs:
       - name: Run tests
         run: dotnet test -s nunit.runsettings
       - name: "Import results to Xray"
-        uses: mikepenz/xray-action@{latest-release}
+        uses: mikepenz/xray-action@v1.1.0
         with:
            username: ${{ secrets.JIRA_USERNAME }}
            password: ${{ secrets.JIRA_PASSWORD }}
