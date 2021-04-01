@@ -43,7 +43,7 @@ namespace SeleniumTests
             IWebElement query = driver.FindElement(By.Name("q"));
             query.SendKeys("Selenium OpenQA");
             query.Submit();
-            Assert.IsTrue(driver.PageSource.Contains("www.openqa.org"));
+            Assert.IsTrue(driver.PageSource.Contains("www.selenium.dev"));
             //Assert.AreEqual("Selenium OpenQA - Google Search",driver.Title);
         }
     }
