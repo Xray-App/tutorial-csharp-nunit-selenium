@@ -43,7 +43,7 @@ jobs:
            password: ${{ secrets.JIRA_PASSWORD }}
            xrayCloud: "false"
            xrayBaseUrl: ${{ secrets.JIRA_BASEURL }}
-           testFormat: "junit"
+           testFormat: "nunit"
            testPaths: "**/TestResults/*.xml"
            testPlanKey: "XT-1"
            projectKey: "XT"
