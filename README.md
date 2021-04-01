@@ -31,6 +31,7 @@ dotnet test -s nunit.runsettings
 Tests can also run inside a Docker container; local directory should be mounted so that NUnit XML results are stored locally.
 
 ```bash
+docker build . -t nunit_webdriver_tests
 docker run --rm -v $(pwd)/TestResults:/source/bin/Debug/net5.0/TestResults -t nunit_webdriver_tests
 ```
 
