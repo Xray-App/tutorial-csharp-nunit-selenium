@@ -2,11 +2,12 @@ using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Google.PageObjects;
 
-namespace SeleniumTests
+namespace SeleniumWebdriver
 {
     [TestFixture]
-    public class WebdriverTest
+    public class GoogleSearchTests
     {
         private IWebDriver driver;
 
@@ -32,19 +33,28 @@ namespace SeleniumTests
                 // Ignore errors if unable to close the browser
             }
         }
-        [Test, Property("Requirement", "CALC-1")]
-        public void GoogleTest()
+
+        [Test, Property("Requirement", "XT-9")]
+        public void BasicTextSearch()
         {
-            // Open Google search engine.
+
+            HomePage homePage = new HomePage(driver).Open();
+            //Assert.AreEqual("Google", homePage.PageTitle());
+            SearchResultsPage searchResultsPage = homePage.Search("Selenium OpenQA");
+            //searchResultsPage.results.first
+            Assert.IsTrue(searchResultsPage.Contains("www.selenium.dev"));
+        }
+
+        [Test, Property("Requirement", "XT-9")]
+        public void BasicTextSearchNoPOM()
+        {
             driver.Navigate().GoToUrl("http://www.google.com/");
-            // Assert Title of page.
             Assert.AreEqual("Google", driver.Title);
-            // Provide search term as "Selenium OpenQA"
             IWebElement query = driver.FindElement(By.Name("q"));
             query.SendKeys("Selenium OpenQA");
             query.Submit();
             Assert.IsTrue(driver.PageSource.Contains("www.selenium.dev"));
-            //Assert.AreEqual("Selenium OpenQA - Google Search",driver.Title);
         }
+
     }
 }
