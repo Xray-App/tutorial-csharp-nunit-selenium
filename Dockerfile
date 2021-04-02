@@ -22,6 +22,8 @@ WORKDIR /source
 # copy csproj and restore as distinct layers
 COPY *.csproj .
 COPY *.cs .
+COPY Webdemo .
+COPY Google .
 COPY *.runsettings .
 
 RUN mkdir -p /source/bin/Debug/net5.0/TestResults
