@@ -1,5 +1,5 @@
 parameters:
-- name: testplan
+- name: "testplan"
   type: string
   default: ''
 
