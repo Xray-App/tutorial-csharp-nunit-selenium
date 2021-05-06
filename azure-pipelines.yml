@@ -17,7 +17,7 @@ pool:
 steps:
 
 - bash: |
-    echo ${{ testplan }}
+    echo $(testplan)
   displayName: '(debug) print testplan parameter'
 
 - script: dotnet restore
