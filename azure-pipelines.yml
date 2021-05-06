@@ -1,0 +1,13 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: dotnet restore
+  displayName: 'install build dependencies'
+
+- script: |
+    dotnet test -s nunit.runsettings
+  displayName: 'Run tests'
