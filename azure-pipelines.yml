@@ -15,5 +15,5 @@ steps:
     find . -type f 
   displayName: '(debug) list files in working directory'
 - bash: |
-    curl -H "Content-Type: multipart/form-data" -u $(jira_user):$(jira_password) -F "file=@./bin/Debug/net5.0/TestResults/nunit_webdriver_tests.xml" "$(jira_server_url)/rest/raven/2.0/import/execution/nunit?projectKey=$(project_key)"
+    curl -v -H "Content-Type: multipart/form-data" -u $(jira_user):$(jira_password) -F "file=@./bin/Debug/net5.0/TestResults/nunit_webdriver_tests.xml" "$(jira_server_url)/rest/raven/2.0/import/execution/nunit?projectKey=$(project_key)"
   displayName: 'Import results to Xray'
