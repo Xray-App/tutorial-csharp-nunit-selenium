@@ -1,6 +1,11 @@
 trigger:
 - main
 
+resources:
+  webhooks:
+    - webhook: "MyWebhookTrigger"             ### Webhook alias
+      connection: "MyWebhookConnection"       ### Incoming webhook service connection
+
 pool:
   vmImage: ubuntu-latest
 
