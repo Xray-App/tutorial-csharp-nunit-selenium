@@ -1,3 +1,8 @@
+parameters:
+- name: testplan
+  type: string
+  default: ''
+
 trigger:
 - main
 
@@ -10,6 +15,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- bash: |
+    echo ${{ testplan }}
+  displayName: '(debug) print testplan parameter'
+
 - script: dotnet restore
   displayName: 'install build dependencies'
 
