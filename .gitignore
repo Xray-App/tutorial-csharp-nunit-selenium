@@ -1,3 +1,4 @@
+azure_token
 run_using_nunit3_console.sh
 *.safe
 *.txt
