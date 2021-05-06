@@ -1,7 +1,7 @@
 parameters:
 - name: "testplan"
   type: string
-  default: ''
+  default: ""
 
 trigger:
 - main
