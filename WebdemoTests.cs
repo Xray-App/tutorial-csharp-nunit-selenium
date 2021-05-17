@@ -34,7 +34,8 @@ namespace SeleniumWebdriver
             }
         }
 
-        [Test, Property("Requirement", "XT-10")]
+        //[Test, Property("Requirement", "XT-10")]
+        [Test, Property("Requirement", "CALC-2")]
         public void ValidLogin()
         {
             LoginPage loginPage = new LoginPage(driver).Open();
@@ -43,7 +44,8 @@ namespace SeleniumWebdriver
             Assert.IsTrue(loginResultsPage.Contains("Login succeeded"));
         }
 
-        [Test, Property("Requirement", "XT-10")]
+        //[Test, Property("Requirement", "XT-10")]
+        [Test, Property("Requirement", "CALC-2")]
         public void InvalidLogin()
         {
             LoginPage loginPage = new LoginPage(driver).Open();
