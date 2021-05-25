@@ -9,7 +9,8 @@
 
 Code that supports the tutorial [Testing web applications using Nunit](https://docs.getxray.app/pages/viewpage.action?pageId=32806649) showcasing the integration between [Xray Test Management](https://www.getxray.app/) on Jira and NUnit.
 
-The test automation code implements a basic [Selenium Webdriver test](./WebdriverTest.cs).
+The test automation code implements some basic [Selenium Webdriver tests](./WebdemoTests.cs).
+There are also some other unrelated tests using Google as the target SUT, in case you want to explore further.
 
 ## Prerequisites
 
