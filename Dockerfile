@@ -47,5 +47,5 @@ RUN dotnet restore
 #FROM mcr.microsoft.com/dotnet/runtime:5.0
 #WORKDIR /app
 #COPY --from=build /app .
-ENTRYPOINT ["dotnet", "test","-s","nunit.runsettings"]
+ENTRYPOINT ["dotnet", "test","-s","nunit.runsettings","--filter","WebdemoTests"]
 

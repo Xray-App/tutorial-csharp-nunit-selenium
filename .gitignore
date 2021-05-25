@@ -9,3 +9,4 @@ obj/
 .vscode/
 import_results.sh
 NUnit.ConsoleRunner.3.12.0/
+.DS_Store

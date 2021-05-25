@@ -25,7 +25,7 @@ dotnet restore
 Tests can be run using locally `dotnet` tool.
 
 ```bash
-dotnet test -s nunit.runsettings
+dotnet test -s nunit.runsettings --filter WebdemoTests
 ```
 
 Tests can also run inside a Docker container; local directory should be mounted so that NUnit XML results are stored locally.
@@ -49,7 +49,7 @@ For Xray specific questions, please contact [Xray's support team](https://jira.x
 ## References
 
 - [NUnit](https://nunit.org)
-- [How Xray processes NUnit XML reports](https://docs.getxray.app/display/XRAYCLOUD/Taking+advantage+of+NUnit+XML+reports)
+- [How Xray processes NUnit XML reports (from Xray Cloud documentation)](https://docs.getxray.app/display/XRAYCLOUD/Taking+advantage+of+NUnit+XML+reports)
 
 
 ## LICENSE
