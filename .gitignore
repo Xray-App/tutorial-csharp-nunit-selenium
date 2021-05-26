@@ -10,3 +10,4 @@ obj/
 import_results.sh
 NUnit.ConsoleRunner.3.12.0/
 .DS_Store
+cloud_auth.json
