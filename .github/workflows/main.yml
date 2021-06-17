@@ -36,7 +36,7 @@ jobs:
         uses: nanasess/setup-chromedriver@v1.0.1
       - name: Run tests
         run: dotnet test -s nunit.runsettings
-      - name: "Import results to Xray"
+      - name: "Import results to Xray (server/DC)"
         uses: mikepenz/xray-action@v1.1.0
         with:
            username: ${{ secrets.JIRA_USERNAME }}
@@ -45,5 +45,15 @@ jobs:
            xrayBaseUrl: ${{ secrets.JIRA_BASEURL }}
            testFormat: "nunit"
            testPaths: "**/TestResults/*.xml"
-           testPlanKey: "XT-1"
-           projectKey: "XT"
+           testPlanKey: "${{ secrets.TESTPLAN_KEY }}"
+           projectKey: "${{ secrets.PROJECT_KEY }}"
+      - name: "Import results to Xray (cloud)"
+        uses: mikepenz/xray-action@v1.1.0
+        with:
+           username: "${{ secrets.CLIENT_ID }}"
+           password: "${{ secrets.CLIENT_SECRET }}"
+           xrayCloud: "true"
+           testFormat: "nunit"
+           testPaths: "**/TestResults/*.xml"
+           testPlanKey: "${{ secrets.XRAYCLOUD_TESTPLAN_KEY }}"
+           projectKey: "${{ secrets.PROJECT_KEY }}"
