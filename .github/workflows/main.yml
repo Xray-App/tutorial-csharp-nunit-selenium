@@ -26,16 +26,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1.7.2
+        uses: actions/setup-dotnet@v3.0.3
         with:
           # SDK version to use. Examples: 2.2.104, 3.1, 3.1.x
-          dotnet-version: 5.0.201  
+          dotnet-version: 7.0.x
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v0.0.0
       - name: setup-chromedriver
         uses: nanasess/setup-chromedriver@v1.0.1
       - name: Run tests
-        run: dotnet test -s nunit.runsettings
+        run: |
+          dotnet restore
+          dotnet test -s nunit.runsettings
       - name: "Import results to Xray (server/DC)"
         uses: mikepenz/xray-action@v2.3.0
         with:
